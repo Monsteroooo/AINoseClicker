@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ainoseclicker"
+version = "1.0.0"
+description = "NoseClicker AI — Первая нейросеть с тактильной отдачей и симулятором хрящей"
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [{ name = "NoseClicker Team" }]
+license = { text = "MIT" }
+keywords = ["terminal", "tui", "clicker", "ai", "humor", "sound", "fastapi"]
+dependencies = [
+    "rich>=13.0.0",
+    "fastapi>=0.100.0",
+    "uvicorn>=0.20.0",
+    "pydantic>=2.0.0"
+]
+
+[project.scripts]
+ainoseclicker = "main:main"
+noseclicker = "main:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["nose_clicker*"]
